@@ -515,6 +515,37 @@ a {
   color: var(--muted);
 }
 
+/* —— Skills —— */
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.85rem 1.25rem;
+}
+
+.skills li {
+  position: relative;
+  padding: 0.85rem 1rem 0.85rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: rgba(28, 34, 56, 0.45);
+  font-weight: 500;
+}
+
+.skills li::before {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  top: 50%;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
 /* —— Languages —— */
 .languages {
   list-style: none;
@@ -635,10 +666,16 @@ a {
   .job__meta p,
   .job__body ul,
   .edu p,
+  .skills li,
   .languages__level,
   .footer,
   .profile-card__contacts a {
     color: #444;
+  }
+
+  .skills li {
+    background: none;
+    border-color: #ddd;
   }
 
   [data-reveal] {
